@@ -1,28 +1,41 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "yogawithjuju",
+  "homepage": "https://benolayinka.github.io/juju",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "breath & movement - hatha inspired yoga",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Juju Kim <juju.kim90@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.16",
+    "gatsby-background-image": "^0.3.0",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.28",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-sharp": "^2.1.17",
+    "gh-pages": "^2.0.1",
+    "graphql": "^14.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-scroll": "^1.7.11",
+    "react-social-icons": "^4.1.0",
+    "react-spring": "^8.0.19",
+    "styled-components": "^4.2.0",
+    "tailwind": "^4.0.0",
+    "tailwind.macro": "^0.5.10",
+    "tailwindcss": "^0.7.4"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
   },
   "keywords": [
-    "gatsby"
+    "yoga"
   ],
   "license": "MIT",
   "scripts": {
