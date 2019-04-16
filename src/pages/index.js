@@ -3,12 +3,9 @@ import { graphql } from "gatsby"
 import { Parallax } from 'react-spring/renderprops-addons.cjs'
 import { createGlobalStyle } from "styled-components"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import tw from 'tailwind.macro'
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
-//Images
-import background from "../images/juju-background.jpg"
 
 //Components
 import BackgroundSection from "../components/backgroundsection"
@@ -24,53 +21,38 @@ import Drawing from "../views/drawing"
 //Styles
 import { UpDown, UpDownWide } from '../styles/animations'
 
-// Elements
+//Elements
 import Inner from '../elements/inner'
 import { Title, BigTitle, Subtitle, Info } from '../elements/titles'
 
-const JujuBackgroundSection = styled(BgSection)`
-  height:100vh;
-  width:100vw;
-  background-image: linear-gradient(to top , transparent, white)!important;
-  background-color: transparent!important;
-  opacity:1!important;
-`
+//Images
+import background from '../images/juju-background.png'
+import dance from '../images/juju-dance.png'
+import frog from '../images/juju-frog.png'
+import guy from '../images/juju-guy.png'
+import tribe from '../images/juju-tribe.png'
 
-const FacesBackgroundSection = styled(BgSection)`
-  height:100vh;
-  width:100vw;
+const JujuImg = styled.img`
+  &::after {
+    position:relative;
+    display:block;
+    background-image: linear-gradient(to top , transparent, white)!important;
+    z-index:100000;
+    content: '';
+  }
+  ${tw`w-screen`};
   opacity:1!important;
-
+  -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
   `
 
-const GuyImg = styled(Img)`
-  height:503px;
-  width:540px;
-  opacity:1!important;
-  display:inline-block;
-
-  `
-
-const DanceImg = styled(Img)`
-  height:503px;
-  width:540px;
-  opacity:1!important;
-  display:inline-block;
-  `
-
-const FrogImg = styled(Img)`
-  height:503px;
-  width:540px;
-  opacity:1!important;
-  display:inline-block;
-  `
-
-const TribeImg = styled(Img)`
-  margin:50px 50px 50px 50px;
+const DrawingImg = styled.img`
+  ${tw`w-screen sm:w-1/2`};
 `
 
 const IndexPage = ({data}) => (
   <>
+  <Layout/>
   <Hello offset={0}>
       <BigTitle>Yoga with Juju</BigTitle>
         <div>
@@ -82,9 +64,8 @@ const IndexPage = ({data}) => (
         <div>
         </div>
     </Hello>
-  <Layout/>
     <Drawing offset={1}>
-        <TribeImg fluid={data.tribe.childImageSharp.fluid}/>
+        <DrawingImg src={tribe}/>
     </Drawing>
     <Hello offset={2}>
         <BigTitle>
@@ -95,7 +76,7 @@ const IndexPage = ({data}) => (
         </BigTitle>
     </Hello>
     <Drawing offset={3}>
-      <GuyImg fluid = {data.guy.childImageSharp.fluid}/>
+      <DrawingImg src={guy}/>
     </Drawing>
     <Hello offset={4}>
       <BigTitle>
@@ -103,7 +84,7 @@ const IndexPage = ({data}) => (
       </BigTitle>
     </Hello>
     <Drawing offset={5}>
-        <DanceImg fluid={data.dance.childImageSharp.fluid}/>
+        <DrawingImg src={dance}/>
     </Drawing>
     <Hello offset={6}>
       <BigTitle>
@@ -111,7 +92,7 @@ const IndexPage = ({data}) => (
       </BigTitle>
     </Hello>
     <Drawing offset={7}>
-        <FrogImg fluid={data.frog.childImageSharp.fluid}/>
+        <DrawingImg src={frog}/>
     </Drawing>
     <Hello offset={8}>
       <BigTitle>Yoga with Juju</BigTitle>
@@ -122,63 +103,16 @@ const IndexPage = ({data}) => (
         <Footer/>
         </div>
         <div>
+          <Info>I’m Juju! I’ve been teaching practical, intuitive yoga for nearly ten years. I most recently completed a 12-month mentoring programme with Vincent Bolletta in New Zealand, and I’ve been studying the art of restorative yoga since 2015 with Karla Brodie, a Senior Associate of Donna Farhi</Info>
+          <Info>I live in Stockholm, but I’ve shared my practice in New Zealand, South America and Indonesia, and I'm grateful to have been influenced by traditional practice from all over the world. Right now, I'm building my own creative space in Lombok.</Info>
         </div>
     </Hello>
     <Drawing offset = {9}>
       <Element name="about" className="element">
-      <JujuBackgroundSection fluid = {data.background.childImageSharp.fluid}>
-        <AboutText/>
-      </JujuBackgroundSection>
+        <JujuImg src={background}/>
       </Element>
     </Drawing>
   </>
 )
-
-export const pageQuery=graphql`
-      query {
-        ben: file(relativePath: { eq: "juju-ben.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 1170) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        tribe: file(relativePath: { eq: "juju-tribe.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 503) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        guy: file(relativePath: { eq: "juju-guy.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 503) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        frog: file(relativePath: { eq: "juju-frog.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 5000) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        dance: file(relativePath: { eq: "juju-dance.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 500) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        background: file(relativePath: { eq: "juju-background.jpg" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 5000) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `;
 
 export default IndexPage

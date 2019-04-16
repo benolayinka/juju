@@ -28,5 +28,5 @@ export const Subtitle = styled.p`
   `
 
   export const Info = styled.p`
-  ${tw`text-xl lg:text-xl font-sans mx-12 mt-8 xxl:w-3/4`};
+  ${tw`text-2xl lg:text-3xl font-sans mx-12 mt-8 xxl:w-3/4`};
   `
