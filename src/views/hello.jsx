@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const Center = styled.div`
-	${tw`w-2/3`};
+	${tw`w-full xxl:w-2/3`};
 `
 
 const Hello = ({children, offset}) => (
