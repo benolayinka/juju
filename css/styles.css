@@ -2,6 +2,11 @@
   --white: white;
   --black: black;
   --primary: orange;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
 
 hr.divider {
@@ -150,11 +155,19 @@ header.masthead h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: auto 70%;
+  background-size: auto;
 }
 
 .img-size-icon {
   height: 10rem;
+}
+
+.no-wrap { 
+  display:inline-block; 
+}
+
+.letter-spacing {
+  letter-spacing: .2em;
 }
 
 .instagram-feed {
