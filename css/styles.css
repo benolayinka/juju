@@ -155,7 +155,7 @@ header.masthead h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: auto;
+  background-size: 90% 90%;
 }
 
 .img-size-icon {
