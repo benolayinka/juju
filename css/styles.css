@@ -222,3 +222,8 @@ li.heart:before {
     background-repeat: no-repeat;
     margin-right:0.5em;
   }
+
+.img-size-font {
+  height: 1rem;
+  width: 1rem;
+}
