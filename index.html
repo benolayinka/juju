@@ -17,6 +17,8 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
         <!-- Bootstrap Responsive Font Sizes-->
         <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css" rel="stylesheet">
+        <!-- Animate on scroll -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- Core theme CSS-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -51,8 +53,17 @@
                             join a <span class="d-none d-sm-inline">60 min</span> zoom class
                         </a>
                     </div>
+                    <!-- Masthead
+                    <div class="col-4 col-s-6">
+                        <div id="my-div"></div>
+                    </div>
                     <div class="col-4 col-s-6 h-100 bg-stretch">
                         
+                        <object type="image/svg+xml" data="/assets/img/bgyogapose.svg" class="masthead-image">
+                    </div>
+                    -->
+                    <div class="col-4 col-s-6 h-100 mh-100 d-flex align-items-center justify-content-center">
+                        <img class="mb-4 masthead-image" src="/assets/img/bgyogapose.svg"/>
                     </div>
                 </div>
             </div>
@@ -67,25 +78,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="zoom-in">
                         <div class="mt-5">
                             <img class="mb-4 img-size-icon" src="/assets/img/sleep.svg"/>
                             <h3 class="h4 mb-2">sleep better</h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="zoom-in">
                         <div class="mt-5">
                             <img class="mb-4 img-size-icon" src="/assets/img/relax.svg"/>
                             <h3 class="h4 mb-2">feel relaxed</h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="zoom-in">
                         <div class="mt-5">
                             <img class="mb-4 img-size-icon" src="/assets/img/breathe.svg"/>
                             <h3 class="h4 mb-2">breathe easy</h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-3 col-md-6 text-center" data-aos="zoom-in">
                         <div class="mt-5">
                             <img class="mb-4 img-size-icon" src="/assets/img/digest.svg"/>
                             <h3 class="h4 mb-2">digest well</h3>
@@ -100,14 +111,15 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-6">
-                        <img class="w-100" src="/assets/img/bg-juju.jpg"/>
+                        <img class="img-fluid my-5" src="/assets/img/bg-juju.jpg" data-aos="zoom-in"/>
                     </div>
-                    <div class="col-md-6 px-5 my-4 text-center">
-                        <div class="">
-                        <h3 class="mb-4">
-                        Yoga is a practice. </h3>
-                        <p class="mb-4">I find my own personal practice the most confronting... but it is where I really begin to explore my body and mind. </p>
-                        <p>Yoga is time to look INward.</p>
+                    <div class="col-md-6 text-center">
+                        <div class="px-5">
+                            <h3 class="mb-4">
+                            Yoga is a practice. </h3>
+                            <p class="mb-4">I find my own personal practice the most confronting... but it is where I really begin to explore my body and mind. </p>
+                            <p class="mb-4">I want to help you experience this so you feel more connected and have more awareness of your own body.</p>
+                            Yoga is time to look INward.
                         </div>
                     </div>
                 </div>
@@ -118,8 +130,9 @@
         <section class="page-section" id="session">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-md-6 px-5 my-4 text-left">
-                        <div>
+                    <div class="col-md-6 px-5 my-4 ">
+                        <div class="text-left">
+                            <h2 class="mb-4">private sessions with juju:</h2>
                             <h5 class="mb-4">x1 hand drawn yoga sequence to guide you for your practice.</h5>
                             <h5 class="mb-4">x1 40min video call to discuss your needs and to go over the yoga sequence together.</h5>
                             <h5 class="mb-4">x1 15min video call to follow up after a week of practice.</h5>
@@ -317,6 +330,15 @@
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+        <script>
+          //const myVivus = new Vivus('my-div', { duration: 1000, file: '/assets/img/bgyogapose.svg' });
+          //myVivus.play(2);
+        </script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
