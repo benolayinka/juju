@@ -26,7 +26,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">yoga with juju</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">yoga with juju</a>
+                <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#session">book a session</a></li>
@@ -363,7 +364,15 @@
         <!-- Animate on scroll -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
-          AOS.init();
+          AOS.init({
+              // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+              offset: 50, // offset (in px) from the original trigger point
+              delay: 0, // values from 0 to 3000, with step 50ms
+              duration: 1000, // values from 0 to 3000, with step 50ms
+              easing: 'ease', // default easing for AOS animations
+              once: true, // whether animation should happen only once - while scrolling down
+
+            });
         </script>
         <!-- Vivus svg -->
         <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
